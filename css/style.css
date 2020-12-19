@@ -207,6 +207,7 @@ body {
 }
 
 .circulars {
+  opacity: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -220,6 +221,9 @@ body {
   left: 202px;
   top: 50%;
   z-index: 1;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .header {
@@ -253,6 +257,9 @@ body {
 }
 
 .header__info {
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   z-index: 3;
   position: relative;
   top: 50%;
@@ -931,6 +938,9 @@ body {
 }
 
 .elements__item {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   -ms-flex-item-align: baseline;
       align-self: baseline;
   margin-bottom: 20px;
@@ -946,6 +956,10 @@ body {
       -ms-flex-pack: start;
           justify-content: flex-start;
   padding: 22px 19px;
+}
+
+.elements__item:hover {
+  background: #20303d;
 }
 
 .elements__item div {

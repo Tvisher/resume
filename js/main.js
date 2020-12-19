@@ -65,6 +65,9 @@ $(function () {
         ballsPlay('ball-g-b', 5, item);
     });
 
+
+
+    //выпадающий текст из секции:
     $(".block__top").on('click', function () {
         $(this).parent().find('.block__drop').slideToggle(200);
         $(this).find('.block__btn').toggleClass('active');
@@ -92,17 +95,17 @@ $(function () {
         );
         let load = scrollHeight - document.documentElement.clientHeight;
         let loaded = pageYOffset;
-        return Math.round(loaded / load * 100);
+        return loaded / load * 100;
     }
     update(loader());
 
     //прокрутка к верху экрана
-    document.querySelector('.bottomTop').onclick = () => {
+    document.querySelector('.bottomTop').addEventListener('click', () => {
         window.scrollTo({
             top: 0,
             behavior: "smooth"
         });
-    }
+    })
 
 
 
@@ -125,7 +128,7 @@ $(function () {
                     item.classList.add("animate__animated");
                     item.classList.add(`${data.animation}`);
                     item.style.opacity = 1;
-                }, ++i * `${data.delay}`);
+                }, ++i * `${data.delay}` || 1);
             } else { return; }
 
         });
@@ -218,6 +221,12 @@ $(function () {
 
     animated({
         selector: '.info__text',
+        animation: 'animate__fadeInUp',
+        height: 50,
+        delay: 900,
+    });
+    animated({
+        selector: '.circulars',
         animation: 'animate__fadeInUp',
         height: 50,
         delay: 900,
