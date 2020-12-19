@@ -103,6 +103,31 @@ body {
   padding: 0 15px;
 }
 
+.bottomTop {
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  padding: 10px;
+}
+
+.fixedSVG {
+  margin-left: -63px;
+}
+
+.e-c-base {
+  fill: none;
+  stroke: #b4b4b4;
+  stroke-width: 20px;
+}
+
+.e-c-progress {
+  fill: none;
+  stroke: #c15d3f;
+  stroke-width: 20px;
+}
+
 .circular {
   width: 20em;
   height: 20em;
@@ -191,7 +216,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  left: 28%;
+  left: 202px;
   top: 50%;
   z-index: 1;
 }
@@ -422,8 +447,8 @@ body {
 }
 
 .noswipe:hover img {
-  -webkit-transform: scale3d(1.1, 1.1, 1.1);
-          transform: scale3d(1.1, 1.1, 1.1);
+  -webkit-transform: scale3d(1.1, 1.1, 1.1) !important;
+          transform: scale3d(1.1, 1.1, 1.1) !important;
 }
 
 .elem_overlay {
@@ -559,19 +584,6 @@ body {
     -webkit-transform: scale(0);
     transform: scale(0);
   }
-}
-
-.loading {
-  position: fixed;
-  left: 10px;
-  top: 10px;
-  z-index: 999;
-}
-
-.loading span {
-  margin-top: 6px;
-  height: 4px;
-  background: green;
 }
 
 /*skills*/
@@ -881,9 +893,9 @@ body {
 }
 
 .form__btn {
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  transition: all 0.1s linear;
   position: relative;
   top: -26px;
   background: #c15d3f;
@@ -1008,6 +1020,12 @@ body {
     height: 300px;
   }
 
+  .works__elem:hover img {
+    -webkit-transform: translateY(-100%) translateY(300px);
+        -ms-transform: translateY(-100%) translateY(300px);
+            transform: translateY(-100%) translateY(300px);
+  }
+
   .skills {
     padding-bottom: 60px;
   }
@@ -1024,7 +1042,6 @@ body {
 
   .works__elem {
     width: 100%;
-    height: 300px;
   }
 
   .contacts__form {
@@ -1084,11 +1101,40 @@ body {
   }
 
   .skills__elem {
-    font-size: 35px;
+    font-size: 30px;
+    padding: 22px 18px 5px 18px;
+    margin: 18px 8px;
+  }
+
+  .skills__elem::after {
+    left: 10px;
+    bottom: 40px;
   }
 
   .block__title {
     font-size: 20px;
+  }
+
+  .elem_overlay {
+    background: transparent;
+  }
+
+  .works__elem {
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+  }
+
+  .works__elem:hover img {
+    -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+
+  .bottomTop {
+    bottom: 10px;
+    right: 10px;
+    -webkit-transform: scale3d(0.8, 0.8, 0.8);
+            transform: scale3d(0.8, 0.8, 0.8);
   }
 }
 
