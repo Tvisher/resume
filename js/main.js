@@ -54,18 +54,16 @@ $(function () {
     //функция отртсовки лампочек с рандомной позицией
     let ballsWrapper = Array.from(document.querySelectorAll('.bals-wrapper'));
     ballsWrapper.forEach(item => {
-
-        ballsPlay('ball-r-b', 2, item);
-        ballsPlay('ball-r-s', 2, item);
-        ballsPlay('ball-y-b', 2, item);
-        ballsPlay('ball-y-s', 2, item);
-        ballsPlay('ball-g-s', 2, item);
-        ballsPlay('ball-g-b', 2, item);
+        if (document.documentElement.clientWidth < 768) {
+            return;
+        }
+        ballsPlay('ball-r-b', 5, item);
+        ballsPlay('ball-r-s', 5, item);
+        ballsPlay('ball-y-b', 5, item);
+        ballsPlay('ball-y-s', 5, item);
+        ballsPlay('ball-g-s', 5, item);
+        ballsPlay('ball-g-b', 5, item);
     });
-
-
-
-
 
     $(".block__top").on('click', function () {
         $(this).parent().find('.block__drop').slideToggle(200);
@@ -84,6 +82,7 @@ $(function () {
         var offset = - len - len * v / 100;
         $progress.css('stroke-dashoffset', offset);
     }
+
     //вычисление процента прокрутки страницы
     function loader() {
         let scrollHeight = Math.max(
@@ -96,6 +95,14 @@ $(function () {
         return Math.round(loaded / load * 100);
     }
     update(loader());
+
+    //прокрутка к верху экрана
+    document.querySelector('.bottomTop').onclick = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
 
 
 
@@ -192,14 +199,6 @@ $(function () {
         });
 
     });
-
-    //прокрутка к верху экрана
-    document.querySelector('.bottomTop').onclick = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    }
 
 
     //статичная анимация

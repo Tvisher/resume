@@ -674,11 +674,11 @@ body {
 }
 
 .skills__elem:nth-child(8)::after {
-  content: url("../img/photoshop.png");
+  content: url("../img/figma.png");
 }
 
 .skills__elem:nth-child(9)::after {
-  content: url("../img/figma.png");
+  content: url("../img/photoshop.png");
 }
 
 .about {
@@ -1132,8 +1132,8 @@ body {
   }
 
   .bottomTop {
-    bottom: 10px;
-    right: 10px;
+    bottom: 0;
+    right: 0;
     -webkit-transform: scale3d(0.8, 0.8, 0.8);
             transform: scale3d(0.8, 0.8, 0.8);
   }
@@ -1158,10 +1158,6 @@ body {
 
   .works__wrapper {
     margin-top: -25px;
-  }
-
-  .skills__elem {
-    width: 100%;
   }
 
   .about {
