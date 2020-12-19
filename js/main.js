@@ -36,7 +36,7 @@ $$('.circular').forEach(function (el) {
 
 const ballsPlay = (addClass, counter, elem) => {
     for (let i = 0; i < counter; i++) {
-        let ball = document.createElement('div');
+        let ball = document.createElement('span');
         ball.classList.add('ball');
         ball.classList.add(addClass);
         ball.style.left = (Math.random() * 100) + `%`;
@@ -49,12 +49,12 @@ const ballsPlay = (addClass, counter, elem) => {
 let ballsWrapper = Array.from(document.querySelectorAll('.bals-wrapper'));
 ballsWrapper.forEach(item => {
 
-    ballsPlay('ball-r-b', 5, item);
-    ballsPlay('ball-r-s', 5, item);
-    ballsPlay('ball-y-b', 5, item);
-    ballsPlay('ball-y-s', 5, item);
-    ballsPlay('ball-g-s', 5, item);
-    ballsPlay('ball-g-b', 5, item);
+    ballsPlay('ball-r-b', 2, item);
+    ballsPlay('ball-r-s', 2, item);
+    ballsPlay('ball-y-b', 2, item);
+    ballsPlay('ball-y-s', 2, item);
+    ballsPlay('ball-g-s', 2, item);
+    ballsPlay('ball-g-b', 2, item);
 });
 
 
@@ -104,68 +104,38 @@ loader();
 window.addEventListener('scroll', () => {
     loader();
     animated({
-        selector: '.ball-r-b',
-        animation: 'animate__fadeInBottomLeft',
+        selector: '.ball',
+        animation: 'animate__fadeInUp',
         height: 50,
-        delay: 100,
-    });
-    animated({
-        selector: '.ball-r-s',
-        animation: 'animate__fadeInBottomRight',
-        height: 50,
-        delay: 100,
-    });
-    animated({
-        selector: '.ball-y-b',
-        animation: 'animate__fadeInBottomLeft',
-        height: 50,
-        delay: 100,
-    });
-    animated({
-        selector: '.ball-y-s',
-        animation: 'animate__fadeInBottomRight',
-        height: 50,
-        delay: 100,
-    });
-    animated({
-        selector: '.ball-g-b',
-        animation: 'animate__fadeInBottomLeft',
-        height: 50,
-        delay: 100,
-    });
-    animated({
-        selector: '.ball-g-s',
-        animation: 'animate__fadeInBottomRight',
-        height: 50,
-        delay: 100,
+        delay: 50,
     });
 
     animated({
         selector: '.section__title',
         animation: 'animate__fadeInUp',
-        height: 50,
-        delay: 100,
+        height: 1,
+        delay: 50,
     });
 
     animated({
         selector: '.works__elem',
         animation: 'animate__fadeInUp',
-        height: 50,
-        delay: 100,
+        height: 1,
+        delay: 50,
     });
 
     animated({
         selector: '.skills__elem',
         animation: 'animate__flipInX',
-        delay: 100,
-        height: 50,
+        delay: 20,
+        height: 1,
     });
 
     animated({
         selector: '.section__subtitle',
         animation: 'animate__fadeInUp',
-        delay: 100,
-        height: 50,
+        delay: 50,
+        height: 1,
     });
 
 
@@ -183,12 +153,21 @@ window.addEventListener('scroll', () => {
     });
     animated({
         selector: '.elements__item p',
-        animation: 'animate__fadeInBottomRight',
-        delay: 100,
+        animation: 'animate__fadeInUp',
+        delay: 50,
+        height: 1,
+    });
+
+    animated({
+        selector: '.about__block',
+        animation: 'animate__fadeInUp',
+        delay: 50,
         height: 1,
     });
 
 });
+
+
 
 
 
