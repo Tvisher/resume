@@ -112,8 +112,9 @@ body {
   padding: 10px;
 }
 
-.fixedSVG {
-  margin-left: -63px;
+.check {
+  right: -63px;
+  position: relative;
 }
 
 .e-c-base {
