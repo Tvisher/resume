@@ -1159,8 +1159,15 @@ body {
   .bottomTop {
     bottom: 0;
     right: 0;
-    -webkit-transform: scale3d(0.8, 0.8, 0.8);
-            transform: scale3d(0.8, 0.8, 0.8);
+  }
+
+  .bottomTop svg {
+    width: 45px;
+    height: 45px;
+  }
+
+  .bottomTop .check {
+    right: -48px;
   }
 }
 
