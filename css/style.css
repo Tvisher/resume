@@ -97,6 +97,35 @@ body {
   background: #19232b;
 }
 
+html,
+body {
+  scrollbar-color: #c15d3f #19232b;
+  /* «цвет ползунка» «цвет полосы скроллбара» */
+  scrollbar-width: thin;
+  /* толщина */
+}
+
+/* полоса прокрутки (скроллбар) */
+
+::-webkit-scrollbar {
+  width: 8px;
+  /* ширина для вертикального скролла */
+  height: 8px;
+  /* высота для горизонтального скролла */
+  background-color: #19232b;
+}
+
+/* ползунок скроллбара */
+
+::-webkit-scrollbar-thumb {
+  background-color: #c15d3f;
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a04529;
+}
+
 .container {
   width: 1480px;
   margin: 0 auto;
@@ -110,6 +139,10 @@ body {
   right: 20px;
   z-index: 999;
   padding: 10px;
+}
+
+.wow {
+  visibility: hidden;
 }
 
 .check {
@@ -207,7 +240,6 @@ body {
 }
 
 .circulars {
-  opacity: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -218,7 +250,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  left: 202px;
+  left: 315px;
   top: 50%;
   z-index: 1;
   -webkit-transition: all 0.5s ease;
@@ -291,11 +323,13 @@ body {
 }
 
 .info__text {
-  max-width: 450px;
+  max-width: 500px;
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1px;
 }
 
 /*works*/
@@ -393,6 +427,7 @@ body {
 }
 
 .works__elem {
+  visibility: hidden;
   border-radius: 5px;
   margin: 0 auto;
   width: 30%;
@@ -400,9 +435,6 @@ body {
   overflow: hidden;
   background: #000;
   margin-bottom: 50px;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
   position: relative;
 }
 
@@ -410,21 +442,19 @@ body {
   z-index: 1;
   width: 100%;
   height: auto;
-  -webkit-transition: -webkit-transform 8s linear;
-  transition: -webkit-transform 8s linear;
-  -o-transition: transform 8s linear;
-  transition: transform 8s linear;
-  transition: transform 8s linear, -webkit-transform 8s linear;
+  -webkit-transition: all 4s ease-in-out 0.4s;
+  -o-transition: all 4s ease-in-out 0.4s;
+  transition: all 4s ease-in-out 0.4s;
 }
 
 .works__elem:hover img {
-  -webkit-transform: translateY(-100%) translateY(470px);
-      -ms-transform: translateY(-100%) translateY(470px);
-          transform: translateY(-100%) translateY(470px);
+  -webkit-transform: translateY(calc(-100% + 470px));
+      -ms-transform: translateY(calc(-100% + 470px));
+          transform: translateY(calc(-100% + 470px));
 }
 
 .works__elem:hover .elem_overlay {
-  background: transparent;
+  opacity: 0;
 }
 
 .faster img {
@@ -449,9 +479,9 @@ body {
 }
 
 .noswipe img {
-  -webkit-transition: all 2s linear;
-  -o-transition: all 2s linear;
-  transition: all 2s linear;
+  -webkit-transition: all 3s ease-in-out 0.4s;
+  -o-transition: all 3s ease-in-out 0.4s;
+  transition: all 3s ease-in-out 0.4s;
 }
 
 .noswipe:hover img {
@@ -460,15 +490,16 @@ body {
 }
 
 .elem_overlay {
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   top: 0;
-  background: rgba(25, 35, 43, 0.5);
+  background: #000;
+  opacity: 0.5;
   z-index: 2;
 }
 
@@ -751,11 +782,6 @@ body {
   padding-top: 0;
 }
 
-.block__drop.active {
-  padding: 33px;
-  padding-top: 0;
-}
-
 .block__btn {
   -webkit-transition: -webkit-transform 0.5s ease;
   transition: -webkit-transform 0.5s ease;
@@ -901,17 +927,20 @@ body {
 }
 
 .form__btn {
-  -webkit-transition: all 0.1s linear;
-  -o-transition: all 0.1s linear;
-  transition: all 0.1s linear;
+  font-family: Montserrat;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   position: relative;
   top: -26px;
   background: #c15d3f;
   border-radius: 10px;
   color: #20303d;
   text-transform: uppercase;
+  letter-spacing: -1px;
   font-size: 17px;
   line-height: 20px;
+  font-weight: 700;
   padding: 1rem 4rem;
 }
 
@@ -975,7 +1004,7 @@ body {
 .elements__item p {
   font-family: Montserrat;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 20px;
   line-height: 100%;
   color: #c15d3f;
