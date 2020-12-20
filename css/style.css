@@ -433,7 +433,7 @@ body {
   width: 30%;
   height: 470px;
   overflow: hidden;
-  background: #000;
+  background: transparent;
   margin-bottom: 50px;
   position: relative;
 }
@@ -451,10 +451,6 @@ body {
   -webkit-transform: translateY(calc(-100% + 470px));
       -ms-transform: translateY(calc(-100% + 470px));
           transform: translateY(calc(-100% + 470px));
-}
-
-.works__elem:hover .elem_overlay {
-  opacity: 0;
 }
 
 .faster img {
@@ -487,20 +483,6 @@ body {
 .noswipe:hover img {
   -webkit-transform: scale3d(1.1, 1.1, 1.1) !important;
           transform: scale3d(1.1, 1.1, 1.1) !important;
-}
-
-.elem_overlay {
-  -webkit-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  background: #000;
-  opacity: 0.5;
-  z-index: 2;
 }
 
 .ball {
