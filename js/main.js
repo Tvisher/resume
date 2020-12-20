@@ -102,7 +102,7 @@ $(function () {
 
 
 
-    //функция анимации элементов при прокрутке
+    // функция анимации элементов при прокрутке
     // const animated = (data) => {
     //     Array.from(document.querySelectorAll(`${data.selector}`)).forEach((item, i) => {
     //         if (item.classList.contains("animate__animated")) {

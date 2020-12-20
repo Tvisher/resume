@@ -427,7 +427,6 @@ body {
 }
 
 .works__elem {
-  visibility: hidden;
   border-radius: 5px;
   margin: 0 auto;
   width: 30%;
