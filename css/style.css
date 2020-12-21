@@ -1343,6 +1343,24 @@ body ::-webkit-scrollbar-thumb:hover {
   }
 }
 
+@media screen and (max-width: 470px) {
+  .contacts__elements {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .elements__item_mail {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
 @media screen and (max-width: 400px) {
   .works {
     padding: 25px 0px 25px 0px;
