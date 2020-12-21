@@ -91,11 +91,156 @@ a {
 
 /*Конец обнуления*/
 
+.loader_wrapper {
+  background: #212227;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.cssload-loader {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  width: 250px;
+  height: 250px;
+}
+
+.cssload-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+
+.cssload-inner.cssload-one {
+  left: 0%;
+  top: 0%;
+  animation: cssload-rotate-one 1.15s linear infinite;
+  -o-animation: cssload-rotate-one 1.15s linear infinite;
+  -ms-animation: cssload-rotate-one 1.15s linear infinite;
+  -webkit-animation: cssload-rotate-one 1.15s linear infinite;
+  -moz-animation: cssload-rotate-one 1.15s linear infinite;
+  border-bottom: 9px solid #b4b4b4;
+}
+
+.cssload-inner.cssload-two {
+  right: 0%;
+  top: 0%;
+  animation: cssload-rotate-two 1.15s linear infinite;
+  -o-animation: cssload-rotate-two 1.15s linear infinite;
+  -ms-animation: cssload-rotate-two 1.15s linear infinite;
+  -webkit-animation: cssload-rotate-two 1.15s linear infinite;
+  -moz-animation: cssload-rotate-two 1.15s linear infinite;
+  border-right: 9px solid #20303d;
+}
+
+.cssload-inner.cssload-three {
+  right: 0%;
+  bottom: 0%;
+  animation: cssload-rotate-three 1.15s linear infinite;
+  -o-animation: cssload-rotate-three 1.15s linear infinite;
+  -ms-animation: cssload-rotate-three 1.15s linear infinite;
+  -webkit-animation: cssload-rotate-three 1.15s linear infinite;
+  -moz-animation: cssload-rotate-three 1.15s linear infinite;
+  border-top: 9px solid #c15d3f;
+}
+
+@keyframes cssload-rotate-one {
+  0% {
+    -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+            transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+            transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+
+@-webkit-keyframes cssload-rotate-one {
+  0% {
+    -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+
+@keyframes cssload-rotate-two {
+  0% {
+    -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+            transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+            transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+
+@-webkit-keyframes cssload-rotate-two {
+  0% {
+    -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+
+@keyframes cssload-rotate-three {
+  0% {
+    -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+            transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+            transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}
+
+@-webkit-keyframes cssload-rotate-three {
+  0% {
+    -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}
+
 body {
   font-family: "Barlow Condensed", sans-serif;
   color: #fff;
   background: #19232b;
 }
+
+/* Start https://www.cursors-4u.com */
+
+* {
+  cursor: url(https://ani.cursors-4u.net/cursors/cur-13/cur1163.ani), url(https://ani.cursors-4u.net/cursors/cur-13/cur1163.png), auto !important;
+}
+
+/* End https://www.cursors-4u.com */
 
 html,
 body {
@@ -103,11 +248,12 @@ body {
   /* «цвет ползунка» «цвет полосы скроллбара» */
   scrollbar-width: thin;
   /* толщина */
+  /* полоса прокрутки (скроллбар) */
+  /* ползунок скроллбара */
 }
 
-/* полоса прокрутки (скроллбар) */
-
-::-webkit-scrollbar {
+html ::-webkit-scrollbar,
+body ::-webkit-scrollbar {
   width: 8px;
   /* ширина для вертикального скролла */
   height: 8px;
@@ -115,14 +261,14 @@ body {
   background-color: #19232b;
 }
 
-/* ползунок скроллбара */
-
-::-webkit-scrollbar-thumb {
+html ::-webkit-scrollbar-thumb,
+body ::-webkit-scrollbar-thumb {
   background-color: #c15d3f;
   border-radius: 2em;
 }
 
-::-webkit-scrollbar-thumb:hover {
+html ::-webkit-scrollbar-thumb:hover,
+body ::-webkit-scrollbar-thumb:hover {
   background-color: #a04529;
 }
 
@@ -137,7 +283,7 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 999;
+  z-index: 998;
   padding: 10px;
 }
 
@@ -265,6 +411,7 @@ body {
   background-size: cover;
   position: fixed;
   top: 0;
+  right: 0;
   height: 100vh;
   width: 100%;
 }
@@ -434,6 +581,9 @@ body {
   overflow: hidden;
   background: transparent;
   margin-bottom: 50px;
+  -webkit-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
   position: relative;
 }
 
@@ -441,9 +591,11 @@ body {
   z-index: 1;
   width: 100%;
   height: auto;
-  -webkit-transition: all 4s ease-in-out 0.4s;
-  -o-transition: all 4s ease-in-out 0.4s;
-  transition: all 4s ease-in-out 0.4s;
+  -webkit-transition: -webkit-transform 4s ease-in-out 0.4s;
+  transition: -webkit-transform 4s ease-in-out 0.4s;
+  -o-transition: transform 4s ease-in-out 0.4s;
+  transition: transform 4s ease-in-out 0.4s;
+  transition: transform 4s ease-in-out 0.4s, -webkit-transform 4s ease-in-out 0.4s;
 }
 
 .works__elem:hover img {
@@ -453,11 +605,11 @@ body {
 }
 
 .faster img {
-  -webkit-transition: -webkit-transform 2s linear;
-  transition: -webkit-transform 2s linear;
-  -o-transition: transform 2s linear;
-  transition: transform 2s linear;
-  transition: transform 2s linear, -webkit-transform 2s linear;
+  -webkit-transition: -webkit-transform 2s ease-in-out 0.4s;
+  transition: -webkit-transform 2s ease-in-out 0.4s;
+  -o-transition: transform 2s ease-in-out 0.4s;
+  transition: transform 2s ease-in-out 0.4s;
+  transition: transform 2s ease-in-out 0.4s, -webkit-transform 2s ease-in-out 0.4s;
 }
 
 .noswipe {
@@ -636,9 +788,9 @@ body {
 }
 
 .skills__elem {
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
   background: #19232b;
   border-radius: 10px;
   color: #b4b4b4;
@@ -707,6 +859,7 @@ body {
 
 .about__subtitle {
   top: 55px;
+  font-size: 110px;
 }
 
 .about__wrapper {
@@ -761,6 +914,21 @@ body {
   display: none;
   padding: 33px;
   padding-top: 0;
+}
+
+.drop__item {
+  margin-bottom: 20px;
+}
+
+.drop__item span {
+  color: #c15d3f;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.drop__item p {
+  padding-left: 15px;
 }
 
 .block__btn {
@@ -1121,6 +1289,10 @@ body {
     top: -100px;
   }
 
+  .about {
+    padding: 0px 0px 120px 0px;
+  }
+
   .about__wrapper {
     margin-top: 50px;
   }
@@ -1145,6 +1317,7 @@ body {
   }
 
   .works__elem {
+    height: auto;
     -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
             box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
   }
