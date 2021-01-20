@@ -228,8 +228,53 @@ a {
   }
 }
 
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("../fonts/BarlowCondensed-SemiBold.eot");
+  src: url("../fonts/BarlowCondensed-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/BarlowCondensed-SemiBold.woff2") format("woff2"), url("../fonts/BarlowCondensed-SemiBold.woff") format("woff"), url("../fonts/BarlowCondensed-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("../fonts/BarlowCondensed-Bold.eot");
+  src: url("../fonts/BarlowCondensed-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/BarlowCondensed-Bold.woff2") format("woff2"), url("fonts/BarlowCondensed-Bold.woff") format("woff"), url("../fonts/BarlowCondensed-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Bold.eot");
+  src: url("../fonts/Montserrat-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.eot");
+  src: url("../fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Medium.eot");
+  src: url("../fonts/Montserrat-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
   font-weight: 600;
   font-style: normal;
   color: #fff;
@@ -450,7 +495,7 @@ body ::-webkit-scrollbar-thumb:hover {
 }
 
 .info__subtitle {
-  font-family: 'Montserrat',sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 21px;
@@ -473,7 +518,7 @@ body ::-webkit-scrollbar-thumb:hover {
 
 .info__text {
   max-width: 500px;
-  font-family: 'Montserrat',sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -532,7 +577,7 @@ body ::-webkit-scrollbar-thumb:hover {
   text-align: center;
   text-transform: uppercase;
   color: #c15d3f;
-  font-family: 'Montserrat',sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 55px;
@@ -898,7 +943,7 @@ body ::-webkit-scrollbar-thumb:hover {
 .block__title {
   padding-right: 20px;
   width: 100%;
-  font-family: 'Montserrat',sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 25px;
@@ -908,7 +953,7 @@ body ::-webkit-scrollbar-thumb:hover {
 }
 
 .block__drop {
-  font-family: 'Montserrat',sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -1032,7 +1077,7 @@ body ::-webkit-scrollbar-thumb:hover {
 .contacts__form textarea {
   background: #20303d;
   border-radius: 10px;
-  font-family: 'Montserrat',sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 17px;
@@ -1079,7 +1124,7 @@ body ::-webkit-scrollbar-thumb:hover {
 }
 
 .form__btn {
-  font-family: 'Montserrat',sans-serif;
+  font-family: "Montserrat", sans-serif;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -1154,7 +1199,7 @@ body ::-webkit-scrollbar-thumb:hover {
 }
 
 .elements__item p {
-  font-family: 'Montserrat',sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -1178,7 +1223,7 @@ body ::-webkit-scrollbar-thumb:hover {
 .reserved {
   opacity: 0.7;
   text-align: center;
-  font-family: 'Montserrat',sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 17px;
