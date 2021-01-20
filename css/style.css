@@ -228,51 +228,6 @@ a {
   }
 }
 
-@font-face {
-  font-family: "Barlow Condensed";
-  src: url("../fonts/BarlowCondensed-SemiBold.eot");
-  src: url("../fonts/BarlowCondensed-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/BarlowCondensed-SemiBold.woff2") format("woff2"), url("../fonts/BarlowCondensed-SemiBold.woff") format("woff"), url("../fonts/BarlowCondensed-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Barlow Condensed";
-  src: url("../fonts/BarlowCondensed-Bold.eot");
-  src: url("../fonts/BarlowCondensed-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/BarlowCondensed-Bold.woff2") format("woff2"), url("fonts/BarlowCondensed-Bold.woff") format("woff"), url("../fonts/BarlowCondensed-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Bold.eot");
-  src: url("../fonts/Montserrat-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Regular.eot");
-  src: url("../fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Medium.eot");
-  src: url("../fonts/Montserrat-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
 body {
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 600;
