@@ -228,8 +228,45 @@ a {
   }
 }
 
+@font-face {
+  font-family: 'Barlow Condensed';
+  src: url("../fonts/BarlowCondensed-Bold.woff2") format("woff2"), url("../fonts/BarlowCondensed-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Barlow Condensed';
+  src: url("../fonts/BarlowCondensed-SemiBold.woff2") format("woff2"), url("../fonts/BarlowCondensed-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: 'Barlow Condensed';
+  font-weight: 600;
+  font-style: normal;
   color: #fff;
   background: #19232b;
 }
@@ -448,7 +485,7 @@ body ::-webkit-scrollbar-thumb:hover {
 }
 
 .info__subtitle {
-  font-family: Montserrat;
+  font-family: 'Montserrat',sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 21px;
@@ -456,7 +493,7 @@ body ::-webkit-scrollbar-thumb:hover {
 }
 
 .info__title {
-  font-weight: 700;
+  font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -471,9 +508,9 @@ body ::-webkit-scrollbar-thumb:hover {
 
 .info__text {
   max-width: 500px;
-  font-family: Montserrat;
+  font-family: 'Montserrat',sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 18px;
   line-height: 25px;
   letter-spacing: 1px;
@@ -488,7 +525,7 @@ body ::-webkit-scrollbar-thumb:hover {
   z-index: 3;
 }
 
-.vertical_line {
+.main__vertical_line {
   z-index: 1;
   opacity: 0.5;
   position: absolute;
@@ -499,23 +536,23 @@ body ::-webkit-scrollbar-thumb:hover {
   background: rgba(193, 93, 63, 0.38);
 }
 
-.vertical_line:nth-child(1) {
+.main__vertical_line:nth-child(1) {
   left: 16.666%;
 }
 
-.vertical_line:nth-child(2) {
+.main__vertical_line:nth-child(2) {
   left: 33.333%;
 }
 
-.vertical_line:nth-child(3) {
+.main__vertical_line:nth-child(3) {
   left: 49.999%;
 }
 
-.vertical_line:nth-child(4) {
+.main__vertical_line:nth-child(4) {
   left: 66.666%;
 }
 
-.vertical_line:nth-child(5) {
+.main__vertical_line:nth-child(5) {
   left: 83.333%;
 }
 
@@ -530,7 +567,7 @@ body ::-webkit-scrollbar-thumb:hover {
   text-align: center;
   text-transform: uppercase;
   color: #c15d3f;
-  font-family: Montserrat;
+  font-family: 'Montserrat',sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 55px;
@@ -546,6 +583,7 @@ body ::-webkit-scrollbar-thumb:hover {
 }
 
 .section__subtitle {
+  font-weight: 600;
   opacity: 0.3 !important;
   position: relative;
   text-transform: uppercase;
@@ -895,7 +933,7 @@ body ::-webkit-scrollbar-thumb:hover {
 .block__title {
   padding-right: 20px;
   width: 100%;
-  font-family: Montserrat;
+  font-family: 'Montserrat',sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 25px;
@@ -905,7 +943,7 @@ body ::-webkit-scrollbar-thumb:hover {
 }
 
 .block__drop {
-  font-family: Montserrat;
+  font-family: 'Montserrat',sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -1029,7 +1067,7 @@ body ::-webkit-scrollbar-thumb:hover {
 .contacts__form textarea {
   background: #20303d;
   border-radius: 10px;
-  font-family: Montserrat;
+  font-family: 'Montserrat',sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 17px;
@@ -1076,7 +1114,7 @@ body ::-webkit-scrollbar-thumb:hover {
 }
 
 .form__btn {
-  font-family: Montserrat;
+  font-family: 'Montserrat',sans-serif;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -1151,7 +1189,7 @@ body ::-webkit-scrollbar-thumb:hover {
 }
 
 .elements__item p {
-  font-family: Montserrat;
+  font-family: 'Montserrat',sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -1175,7 +1213,7 @@ body ::-webkit-scrollbar-thumb:hover {
 .reserved {
   opacity: 0.7;
   text-align: center;
-  font-family: Montserrat;
+  font-family: 'Montserrat',sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 17px;
